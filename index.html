@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lag ="en">
+
+<head>
+ <meta charset="UTF-8">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Grechen+Fuemen&display=swap" rel="stylesheet">
+
+<style>
+  body{
+poaition:relative;
+background-color:gray;
+margin:0;
+padding:0;
+}
+.container ul{
+justify-content:center;
+display:flex;
+gap:16px;
+list-style:none;
+}
+button{
+border-radius:10px;
+
+}
+button:hover{
+background-color:purple;
+}
+.Main{
+  font-family: "Assistant", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  
+}
+h2{
+color:white;
+}
+h1{
+color:purple;
+}
+section {
+  width: 50%; /* Adjust width as needed */
+  margin: auto; /* Centers horizontally */
+  text-align: center; /* Centers text inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content inside */
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid black; /* Optional: just to visualize the section */
+  
+}
+
+ section p:first-of-type {
+  color: purple;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+section p:nth-of-type(3) {
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+}
+img{
+border-radius:50%;
+}
+#SKILLS ul{
+list-style:none;
+}
+#EDUCATIONS ul{
+list-style:none;
+}
+#EXPERINCE ul{
+list-style:none;
+}
+#CONTACT ul{
+list-style:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+ <ul>
+      <li><button>ABOUT</button></li>
+      <li><button>SKILLS</button></li>
+      <li><button>EDUCATIONS</button></li>
+      <li><button>EXPERINCE</button></li>
+      <li><button>CONTACT</button></li>
+
+</ul>
+
+</div>
+
+<div class="Main">
+<section id="ABOUT">
+    <h2>ABOUT</h2>
+    <hr>
+    <img src="pkaz.jpg" alt="My Artwork" height="200">
+    
+    <h1>HELLO</h1>
+    
+    <p>My name is Precious, and I am a Computer Programmer.</p>
+    
+    <p>
+        I am passionate about coding with HTML, CSS, and JavaScript to bring ideas to life 
+        and create visually appealing web designs. I enjoy typing and solving software-related 
+        challenges, particularly those in website development.
+    </p>
+    
+    <p>
+        With a strong ability to thrive in high-pressure environments, I leverage my excellent 
+        communication and problem-solving skills to deliver effective solutions. My adaptability 
+        and collaborative approach have led to significant process improvements, demonstrating 
+        my commitment to excellence and teamwork.
+    </p>
+</section>
+
+
+<section id="SKILLS">
+  <h2>SKILLS</h1>
+ <img src="skills.jpg" alt="art work" height="200"/>
+<h3>Soft Skills</h3>
+<ul>
+    <li>communication skills</li>
+    <li>problem solving skills</li>
+    <li>Time management skills</li>
+    <li>Multitasking Abilities skills</li>
+    <li>Teamwork & Collaboration skills</li>
+</ul>
+<h3>Technical Skills</h3>
+  <ul>
+    <li>HTML, CSS, JavaScript</li>
+    <li>React, Node.js</li>
+    <li>github, git</li>
+  </ul>
+  
+</section>
+
+<section id="EDUCATIONS">
+
+<h2>EDUCATIONS</h2>
+        <ul>
+            <li><strong>Bachelor's in Multimedia and programming</strong> - SMK Applied Science  University (2023-2026)</li>
+            <li><strong>Web Development Certification</strong> - Udemy (2025)</li>
+            <li><strong>High School Diploma</strong> - OJIM'S College (2006-2012)</li>
+        </ul>
+  
+
+
+</section>
+
+<section id="EXPERINCE">
+
+<h2>EXPERINCE</h2>
+     <h3>Customer Service Representative (Broker) – Remaxima, Ukraine</h3>
+        <p><strong>2017 – 2019</strong></p>
+        <ul>
+            <li>Provided customer support via email and phone, assisting clients in setting up trading accounts.</li>
+            <li>Acted as a broker, guiding clients on financial trading processes.</li>
+            <li>Ensured smooth onboarding for new traders by explaining platform features.</li>
+            <li>Maintained excellent client relationships, improving customer satisfaction.</li>
+        </ul>
+<h3>Production & Data Assistant – UAB Paliutis (SWAMPOK), Vilnius, Lithuania</h3>
+        <p><strong>June 2024 – February 2025</strong></p>
+        <ul>
+            <li>Assisted in the production process, ensuring smooth operations across sections.</li>
+            <li>Recorded and managed daily production data, helping track efficiency.</li>
+            <li>Collaborated with the team to improve workflow and meet production targets.</li>
+            <li>Maintained quality control by ensuring accurate reporting of output.</li>
+        </ul>
+
+</section>
+<section id="CONTACT">
+
+<h2>Get In Touch</h2>
+<ul>
+      <li><strong>phone:</strong>+37063365077</li>
+      <li><strong>Email:</strong>pnjekwe1@gmail.com</li>
+      <li><a href="https://github.com/paz0123">github.com</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100082298493284">facebook.com</a></li>
+
+</ul>
+
+
+</section>
+
+</div>
+
+
+
+</body>
+
+
+
+
+<script>
+
+document.querySelectorAll(".container button").forEach(button => {
+    button.addEventListener("click", function () {
+        let sectionId = this.textContent.toUpperCase();
+        let section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
+window.addEventListener("scroll", () => {
+    let sections = document.querySelectorAll("section");
+    let scrollPos = window.scrollY + 200;
+
+    sections.forEach(section => {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+            document.querySelectorAll(".container button").forEach(btn => {
+                btn.style.backgroundColor = "";
+            });
+
+            let activeButton = Array.from(document.querySelectorAll(".container button"))
+                .find(btn => btn.textContent.toUpperCase() === section.id);
+            
+            if (activeButton) {
+                activeButton.style.backgroundColor = "purple";
+            }
+        }
+    });
+});
+
+
+
+
+</script>
+
+<html>
